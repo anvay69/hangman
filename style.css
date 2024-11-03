@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 10em;
+    margin: 20px auto;
+}
+
+.header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.header p {
+    text-align: right;
+    margin: 0;
+    font-size: 0.7em;
+}
+
+main {
+    flex: 1;
+
+    display: flex;
+    margin: auto;
+    width: 80%;
+    min-width: 600px;
+    max-width: 1000px;
+}
+
+.hangman {
+    /* border: 1px solid black; */
+    width: 30%;
+    position: relative;
+}
+
+.hangman * {
+    position: absolute;
+}
+
+.stand-bottom {
+    width: 250px;
+    height: 0;
+    border-bottom: 10px solid black;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    top: 400px;
+    left: calc(50% - 125px);
+}
+
+.stand-left {
+    height: 400px;
+    width: 0;
+    border-left: 10px solid black;
+    left: calc(50% - 105px);
+    top: 0;
+}
+
+.stand-top {
+    height: 0;
+    width: 200px;
+    border-top: 8px solid black;
+    left: calc(50% - 105px);
+    top: 0;
+}
+
+.rope {
+    height: 40px;
+    width: 0;
+    border: 2px solid black;
+    left: calc(50% - 2px);
+    top: 8px;
+}
+
+.head {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid black;
+    top: 48px;
+    left: calc(50% - 30px);
+}
+
+.torso {
+    width: 0;
+    height: 90px;
+    border: 1px solid black;
+    left: calc(50% - 1px);
+    top: 108px;
+}
+
+.left-hand, .right-hand {
+    width: 0;
+    height: 60px;
+    border: 1px solid black;
+    left: calc(50% - 1px);
+    top: 118px;
+    transform-origin: top left;
+}
+
+.right-hand {
+    transform: skew(30deg);
+}
+
+.left-hand {
+    transform: skew(-30deg);
+}
+
+.left-leg, .right-leg {
+    width: 0;
+    height: 60px;
+    border: 1px solid black;
+    left: calc(50% - 1px);
+    top: 198px;
+    transform-origin: top left;
+}
+
+.left-leg {
+    transform: skew(-35deg);
+}
+
+.right-leg {
+    transform: skew(35deg);
+}
+
+.wordarea-wrapper {
+    border: 1px solid black;
+    width: 70%;
+}
+
+.word-char {
+    text-decoration: underline;
+}
+footer {
+    text-align: center;
+    background-color: gray;
+}
+
+footer p {
+    margin: 0;
+    & a {
+        color: black;
+    }
+}
