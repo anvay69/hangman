@@ -134,11 +134,22 @@ main {
 .wordarea-wrapper {
     border: 1px solid black;
     width: 70%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .word-char {
     text-decoration: underline;
 }
+
+.keyboard {
+    width: 60%;
+    text-align: center;
+}
+
 footer {
     text-align: center;
     background-color: gray;
