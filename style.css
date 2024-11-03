@@ -39,6 +39,7 @@ main {
 .hangman {
     /* border: 1px solid black; */
     width: 30%;
+    min-width: 280px;
     position: relative;
 }
 
@@ -143,11 +144,27 @@ main {
 
 .word-char {
     text-decoration: underline;
+    font-family: monospace;
+    font-size: 18px;
+    margin: 0.2em;
 }
 
 .keyboard {
     width: 60%;
     text-align: center;
+    font-size: 18px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.keyboard * {
+    padding: 0.4em;
+    border-radius: 50%;
+    font-family: monospace;
+    border: 1px solid black;
 }
 
 footer {
