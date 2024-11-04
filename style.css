@@ -39,7 +39,7 @@ body {
 .hangman {
     /* border: 1px solid black; */
     width: 30%;
-    height: 500px;
+    height: 430px;
     min-width: 280px;
     position: relative;
 }
@@ -144,7 +144,7 @@ body {
 }
 
 .hint {
-    margin: 2em 0;
+    margin: 0 0 2em;
 }
 
 .word-char {
@@ -204,9 +204,19 @@ footer p {
 }
 
 @media (max-width: 500px) {
+    .hangman {
+        transform: scale(0.5);
+        transform-origin: top;
+        height: 215px;
+    }
+
     .gamearea {
         flex-direction: column;
         align-items: center;
+    }
+
+    .wordarea-wrapper {
+        width: 100%;
     }
 
     .keyboard {
