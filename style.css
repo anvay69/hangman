@@ -6,7 +6,7 @@
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
 }
@@ -33,13 +33,13 @@ body {
     display: flex;
     margin: auto;
     width: 80%;
-    min-width: 600px;
     max-width: 1000px;
 }
 
 .hangman {
     /* border: 1px solid black; */
     width: 30%;
+    height: 500px;
     min-width: 280px;
     position: relative;
 }
@@ -134,13 +134,17 @@ body {
 }
 
 .wordarea-wrapper {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 70%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.hint {
+    margin: 2em 0;
 }
 
 .word-char {
@@ -159,6 +163,8 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1em;
+
+    margin: 2em 0;
 }
 
 .keyboard * {
@@ -194,5 +200,16 @@ footer p {
     margin: 0;
     & a {
         color: black;
+    }
+}
+
+@media (max-width: 500px) {
+    .gamearea {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .keyboard {
+        width: 100%;
     }
 }
