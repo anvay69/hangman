@@ -15,7 +15,7 @@
     </div>
     
     <!-- The Game Area-->
-    <main class="gamearea">
+    <div class="gamearea">
         <!-- The Hangman, left side of game area-->
         <div class="hangman">
             <div class="stand-top"></div>
@@ -39,11 +39,17 @@
             <div class="keyboard">
             </div>
         </div>
-    </main>
+    </div>
+
+    <div class="endscreen">
+        <p>The word was <span id="word-reveal"></span></p>
+        <p>You <span id="win-status"></span></p>
+        <button id="restart" onclick="setup();">Play Again</button>
+    </div>
 
     <footer>
         <p>Made with ❤️</p>
-        <p>By <a href="https://github.com/anvay69">Anvay</a></p>
+        <p>By <a target="_blank" href="https://github.com/anvay69">Anvay</a></p>
     </footer>
 </body>
 </html>
